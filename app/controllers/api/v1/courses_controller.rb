@@ -62,7 +62,7 @@ module Api
       end
 
       def course_params
-        params.require(:course).permit(:name, :author, :category_id)
+        params.require(:course).permit(:name, :author, :category_id, :state)
       end
     end
   end

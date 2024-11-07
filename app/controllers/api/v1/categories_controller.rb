@@ -17,6 +17,7 @@ module Api
 
       def create
         @category = @vertical.categories.new(category_params)
+        puts "===#{@category}"
         if @category.save
           render json: @category, status: :created
         else
@@ -48,7 +49,7 @@ module Api
       end
 
       def category_params
-        params.require(:category).permit(:name, :vertical_id)
+        params.require(:category).permit(:name, :vertical_id, :state)
       end
     end
   end
