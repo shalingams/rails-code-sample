@@ -30,8 +30,8 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
-gem 'elasticsearch', '~> 7.0'
-gem 'elasticsearch-model', '~> 7.0'
+gem 'elasticsearch', '~> 8.15'
+gem 'elasticsearch-model', '~> 8.0'
 gem 'doorkeeper'
 
 gem 'dotenv-rails', groups: [:development, :test]
