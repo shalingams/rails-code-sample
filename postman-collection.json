@@ -1,0 +1,331 @@
+{
+  "info": {
+    "name": "Rails API - Verticals, Categories, Courses",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Verticals",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create a New Vertical",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"vertical\": {\n        \"name\": \"Health & Fitness\"\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Categories for a Vertical",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals/:vertical_id/categories",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals",
+            ":vertical_id",
+            "categories"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create a New Category",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"category\": {\n        \"name\": \"Cardio Training\",\n        \"state\": \"active\"\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals/:vertical_id/categories",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals",
+            ":vertical_id",
+            "categories"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update an Existing Category",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"category\": {\n        \"name\": \"Strength Training\"\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals/:vertical_id/categories/:category_id",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals",
+            ":vertical_id",
+            "categories",
+            ":category_id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete a Category",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals/:vertical_id/categories/:category_id",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals",
+            ":vertical_id",
+            "categories",
+            ":category_id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Courses for a Category",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals/:vertical_id/categories/:category_id/courses",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals",
+            ":vertical_id",
+            "categories",
+            ":category_id",
+            "courses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create a New Course",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"course\": {\n        \"name\": \"Yoga Basics\",\n        \"author\": \"Jane Doe\",\n        \"state\": \"active\"\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals/:vertical_id/categories/:category_id/courses",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals",
+            ":vertical_id",
+            "categories",
+            ":category_id",
+            "courses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update an Existing Course",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"course\": {\n        \"name\": \"Advanced Yoga\"\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals/:vertical_id/categories/:category_id/courses/:course_id",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals",
+            ":vertical_id",
+            "categories",
+            ":category_id",
+            "courses",
+            ":course_id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete a Course",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer ACCESS_TOKEN",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/verticals/:vertical_id/categories/:category_id/courses/:course_id",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "verticals",
+            ":vertical_id",
+            "categories",
+            ":category_id",
+            "courses",
+            ":course_id"
+          ]
+        }
+      }
+    }
+  ]
+}
